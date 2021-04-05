@@ -27,8 +27,8 @@ public class BrowserClass {
 	        
 			{
 			WebDriverWait wait = new WebDriverWait(driver,15);
-			wait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText("Маркет")));
-			WebElement market = driver.findElement(By.linkText("Маркет"));
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText("ГЊГ Г°ГЄГҐГІ")));
+			WebElement market = driver.findElement(By.linkText("ГЊГ Г°ГЄГҐГІ"));
 		    Actions builder = new Actions(driver);
 		    builder.moveToElement(market).perform();
 			market.click();
@@ -86,7 +86,7 @@ public class BrowserClass {
 			     executor.executeScript("arguments[0].click();", driver.findElement(By.xpath("//div[2]/div/div[2]/div/div/button")));
 			  }
 			
-     	    //Ожидание 10 секунд перед закрытием браузера
+     	    //ГЋГ¦ГЁГ¤Г Г­ГЁГҐ 10 Г±ГҐГЄГіГ­Г¤ ГЇГҐГ°ГҐГ¤ Г§Г ГЄГ°Г»ГІГЁГҐГ¬ ГЎГ°Г ГіГ§ГҐГ°Г 
      	    Thread.sleep(20000);
      	   try {
 			     driver.findElement(By.xpath("//button[6]")).click();
@@ -109,10 +109,10 @@ public class BrowserClass {
      	 Thread.sleep(10000);
      	 
      	try {
-		     driver.findElement(By.xpath("//span[contains(.,'Смартфон Xiaomi Poco M3 4/64GB, черный')]")).click();
+		     driver.findElement(By.xpath("/html/body/div[2]/div[3]/div[3]/div[5]/div/div[1]/div/div/div/article[1]/div[4]/div[1]/h3/a/span")).click();
 		  } catch (Exception e) {
 		     JavascriptExecutor executor = (JavascriptExecutor) driver;
-		     executor.executeScript("arguments[0].click();", driver.findElement(By.xpath("//span[contains(.,'Смартфон Xiaomi Poco M3 4/64GB, черный')]")));
+		     executor.executeScript("arguments[0].click();", driver.findElement(By.xpath("/html/body/div[2]/div[3]/div[3]/div[5]/div/div[1]/div/div/div/article[1]/div[4]/div[1]/h3/a/span")));
 		  }
      	
      	for (String tab: driver.getWindowHandles())
@@ -125,10 +125,10 @@ public class BrowserClass {
      	 Actions actions = new Actions(driver);
      	 actions.moveToElement(link).build().perform();
      	 
-     	 System.out.println("Оценка: " + link.getText());
+     	 System.out.println("ГЋГ¶ГҐГ­ГЄГ : " + link.getText());
      	       
      	  Thread.sleep(20000);
-     	    //Закрыть браузер
+     	    //Г‡Г ГЄГ°Г»ГІГј ГЎГ°Г ГіГ§ГҐГ°
      	    driver.quit();
      	        
 	}	
