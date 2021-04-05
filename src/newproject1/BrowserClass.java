@@ -109,10 +109,10 @@ public class BrowserClass {
      	 Thread.sleep(10000);
      	 
      	try {
-		     driver.findElement(By.xpath("//span[contains(.,'Смартфон Xiaomi Poco M3 4/64GB, черный')]")).click();
+		     driver.findElement(By.xpath("/html/body/div[2]/div[3]/div[3]/div[5]/div/div[1]/div/div/div/article[1]/div[4]/div[1]/h3/a/span")).click();
 		  } catch (Exception e) {
 		     JavascriptExecutor executor = (JavascriptExecutor) driver;
-		     executor.executeScript("arguments[0].click();", driver.findElement(By.xpath("//span[contains(.,'Смартфон Xiaomi Poco M3 4/64GB, черный')]")));
+		     executor.executeScript("arguments[0].click();", driver.findElement(By.xpath("/html/body/div[2]/div[3]/div[3]/div[5]/div/div[1]/div/div/div/article[1]/div[4]/div[1]/h3/a/span")));
 		  }
      	
      	for (String tab: driver.getWindowHandles())
